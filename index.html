@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Etch-a-Sketch</title>
+</head>
+
+<body>
+    <main>
+        <h1>Etch-a-Sketch</h1>
+        <div class="container" id="set-game-btns">
+            <a id='grid-size' href="#modal">grid-size</a>
+            <a id='reset-game' onclick="createDivs(6)">reset</a>
+        </div>
+        <div class="container">
+            <p>choose-a-color:</p>
+            <input id="color-picker" type="color" value="#F4D799">
+        </div>
+        <div class="container" id="canvas">
+
+        </div>
+    </main>
+    <footer>Crafted by<a id="javi-domi" href="https://github.com/javi-domi">Javier Dominguez</a>
+    </footer>
+</body>
+<script src="./app/script.js"></script>
+
+</html>

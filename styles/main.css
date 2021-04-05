@@ -72,7 +72,7 @@ a:hover {
 }
 #color-picker {
   padding: 8px;
-  margin-top: 16px;
+  margin-top: 12px;
   border: 2px solid black;
   width: 180px;
   height: 48px;
@@ -83,8 +83,13 @@ a:hover {
   box-shadow: 8px 8px black;
 }
 #canvas {
-  height: 100%;
-  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(16, 2fr);
+  grid-template-rows: repeat(16, 2fr);
+  border: 2px solid black;
+  height: 560px;
+  width: 560px;
+  margin: 0;
 }
 .row {
   display: flex;
@@ -92,9 +97,49 @@ a:hover {
 .cell {
   background-color: white;
   border: 1px solid black;
-  width: auto;
-  height: auto;
 }
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  background: white;
+  padding: 2.4rem;
+  position: relative;
+  z-index: 1;
+}
+#form {
+  max-width: 500px;
+  text-align: center;
+}
+#form h2 {
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+input {
+  border: 2px solid black;
+  margin: 20px 0;
+  padding: 1rem;
+  width: 100%;
+}
+#form p {
+  margin-top: 60px;
+}
+
 footer {
   display: flex;
   flex-direction: column;

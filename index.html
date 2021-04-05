@@ -13,17 +13,34 @@
     <main>
         <h1>Etch-a-Sketch</h1>
         <div class="container" id="set-game-btns">
-            <a id='grid-size' href="#modal">grid-size</a>
-            <a id='reset-game' onclick="createDivs(6)">reset</a>
+            <a id='grid-size' href="#" onclick="Modal.open()">grid-size</a>
+
+            <div class="container">
+                <p>choose-a-color:</p>
+                <input id="color-picker" type="color" value="#F4D799">
+            </div>
+            <a id='reset-game' onclick="">reset</a>
         </div>
-        <div class="container">
-            <p>choose-a-color:</p>
-            <input id="color-picker" type="color" value="#F4D799">
-        </div>
+
         <div class="container" id="canvas">
 
         </div>
     </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>set-grid-size</h2>
+                <p>enter-number + press-enter</p>
+                <form action="">
+                    <input type="number" id="userInput" placeholder="enter-number" required>
+                </form>
+                <p>limit-size: 100</p>
+            </div>
+
+
+
+        </div>
+    </div>
     <footer>Crafted by<a id="javi-domi" href="https://github.com/javi-domi">Javier Dominguez</a>
     </footer>
 </body>
